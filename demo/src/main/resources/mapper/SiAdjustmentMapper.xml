@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.SiAdjustmentMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.model.SiAdjustment">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="adjustment_id" jdbcType="BIGINT" property="adjustmentId" />
+    <result column="si_archive_id" jdbcType="BIGINT" property="siArchiveId" />
+    <result column="si_period" jdbcType="VARCHAR" property="siPeriod" />
+    <result column="active_period_code" jdbcType="VARCHAR" property="activePeriodCode" />
+    <result column="before_payment_base" jdbcType="DECIMAL" property="beforePaymentBase" />
+    <result column="before_housing_fund_base" jdbcType="DECIMAL" property="beforeHousingFundBase" />
+    <result column="before_housing_fund_sup_base" jdbcType="DECIMAL" property="beforeHousingFundSupBase" />
+    <result column="before_vendor_id" jdbcType="BIGINT" property="beforeVendorId" />
+    <result column="before_city_name" jdbcType="VARCHAR" property="beforeCityName" />
+    <result column="before_fully_payment_flag" jdbcType="VARCHAR" property="beforeFullyPaymentFlag" />
+    <result column="after_payment_base" jdbcType="DECIMAL" property="afterPaymentBase" />
+    <result column="after_housing_fund_base" jdbcType="DECIMAL" property="afterHousingFundBase" />
+    <result column="after_housing_fund_sup_base" jdbcType="DECIMAL" property="afterHousingFundSupBase" />
+    <result column="after_vendor_id" jdbcType="BIGINT" property="afterVendorId" />
+    <result column="after_city_name" jdbcType="VARCHAR" property="afterCityName" />
+    <result column="after_fully_payment_flag" jdbcType="VARCHAR" property="afterFullyPaymentFlag" />
+    <result column="sended_date" jdbcType="TIMESTAMP" property="sendedDate" />
+    <result column="sended_flag" jdbcType="VARCHAR" property="sendedFlag" />
+  </resultMap>
+  <!--根据主键查询社保调整数据-->
+  <select id="selectSiAdjustmentByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select * from ele_si_adjustment where adjustment_id = #{adjustmentId,jdbcType=BIGINT}
+  </select>
+  <!--查询所有社保调整数据-->
+  <select id="selectAllSiAdjustments" resultMap="BaseResultMap">
+    select * from ele_si_adjustment
+  </select>
+</mapper>

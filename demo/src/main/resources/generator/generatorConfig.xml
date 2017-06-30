@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="application.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.example.demo.util.BaseMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="${druid.driver-class}"
+                        connectionURL="${druid.url}"
+                        userId="${druid.username}"
+                        password="${druid.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.example.demo.model" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.example.demo.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+
+        <table tableName="ele_employee" domainObjectName="Employee" enableUpdateByExample="false"
+               enableDeleteByExample="false">
+            <generatedKey column="employee_id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="object_version_number" />
+            <ignoreColumn column="creation_date" />
+            <ignoreColumn column="created_by" />
+            <ignoreColumn column="last_updated_by" />
+            <ignoreColumn column="last_update_date" />
+            <ignoreColumn column="last_update_login" />
+            <ignoreColumn column="attribute_category" />
+            <ignoreColumn column="attribute1" />
+            <ignoreColumn column="attribute2" />
+            <ignoreColumn column="attribute3" />
+            <ignoreColumn column="attribute4" />
+            <ignoreColumn column="attribute5" />
+            <ignoreColumn column="attribute6" />
+            <ignoreColumn column="attribute7" />
+            <ignoreColumn column="attribute8" />
+            <ignoreColumn column="attribute9" />
+            <ignoreColumn column="attribute10" />
+            <ignoreColumn column="attribute11" />
+            <ignoreColumn column="attribute12" />
+            <ignoreColumn column="attribute13" />
+            <ignoreColumn column="attribute14" />
+            <ignoreColumn column="attribute15" />
+        </table>
+
+        <!--<table tableName="ele_si_adjustment" domainObjectName="SiAdjustment" enableUpdateByExample="false"
+               enableDeleteByExample="false">
+            <generatedKey column="adjustment_id" sqlStatement="MySql" identity="true"/>
+            <ignoreColumn column="object_version_number" />
+            <ignoreColumn column="creation_date" />
+            <ignoreColumn column="created_by" />
+            <ignoreColumn column="last_updated_by" />
+            <ignoreColumn column="last_update_date" />
+            <ignoreColumn column="last_update_login" />
+            <ignoreColumn column="attribute_category" />
+            <ignoreColumn column="attribute1" />
+            <ignoreColumn column="attribute2" />
+            <ignoreColumn column="attribute3" />
+            <ignoreColumn column="attribute4" />
+            <ignoreColumn column="attribute5" />
+            <ignoreColumn column="attribute6" />
+            <ignoreColumn column="attribute7" />
+            <ignoreColumn column="attribute8" />
+            <ignoreColumn column="attribute9" />
+            <ignoreColumn column="attribute10" />
+            <ignoreColumn column="attribute11" />
+            <ignoreColumn column="attribute12" />
+            <ignoreColumn column="attribute13" />
+            <ignoreColumn column="attribute14" />
+            <ignoreColumn column="attribute15" />
+        </table>-->
+
+
+    </context>
+</generatorConfiguration>

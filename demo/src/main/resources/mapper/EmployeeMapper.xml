@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.EmployeeMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.model.Employee" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="employee_id" property="employeeId" jdbcType="BIGINT" />
+    <result column="employee_num" property="employeeNum" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="identity_card_num" property="identityCardNum" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="household_type" property="householdType" jdbcType="VARCHAR" />
+    <result column="permanent_address" property="permanentAddress" jdbcType="VARCHAR" />
+    <result column="marital_status" property="maritalStatus" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="entrytime" property="entrytime" jdbcType="TIMESTAMP" />
+    <result column="position" property="position" jdbcType="VARCHAR" />
+    <result column="person_category" property="personCategory" jdbcType="VARCHAR" />
+    <result column="working_city" property="workingCity" jdbcType="VARCHAR" />
+    <result column="department1" property="department1" jdbcType="VARCHAR" />
+    <result column="department2" property="department2" jdbcType="VARCHAR" />
+    <result column="department3" property="department3" jdbcType="VARCHAR" />
+    <result column="department4" property="department4" jdbcType="VARCHAR" />
+    <result column="department5" property="department5" jdbcType="VARCHAR" />
+    <result column="department6" property="department6" jdbcType="VARCHAR" />
+    <result column="housing_fund_account_num" property="housingFundAccountNum" jdbcType="VARCHAR" />
+    <result column="housing_fund_account_sup_num" property="housingFundAccountSupNum" jdbcType="VARCHAR" />
+    <result column="employee_status" property="employeeStatus" jdbcType="VARCHAR" />
+    <result column="enable_period" property="enablePeriod" jdbcType="VARCHAR" />
+    <result column="leave_day" property="leaveDay" jdbcType="TIMESTAMP" />
+    <result column="last_working_day" property="lastWorkingDay" jdbcType="TIMESTAMP" />
+    <result column="leave_type" property="leaveType" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
